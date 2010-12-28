@@ -1,4 +1,4 @@
-include_directories( ${KOMAIN_INCLUDES} ${KOTEXT_INCLUDES} )
+include_directories(${KOTEXT_INCLUDES})
 
 #find_package(Qt4 4.5.0 REQUIRED)
 #INCLUDE(${QT_USE_FILE})
@@ -21,7 +21,7 @@ kde4_add_ui_files( kofficegoogledocs_PART_SRCS
 )
 kde4_add_plugin(kofficegoogledocs ${kofficegoogledocs_PART_SRCS})
 
-target_link_libraries(kofficegoogledocs ${QT_LIBRARIES} komain )
+target_link_libraries(kofficegoogledocs ${QT_LIBRARIES} ${KOMAIN_LIBS})
 
 install(TARGETS kofficegoogledocs  DESTINATION ${PLUGIN_INSTALL_DIR})
 
